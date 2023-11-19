@@ -5,13 +5,63 @@
 @import "./layout/sidebar";
 @import "./layout/container";
 
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+  @media (max-width: 768px) {
+    max-width: 500px;
+
+    .menu-button {
+      padding: 10px 15px; 
+    }
+  }
+}
+
+.menu button {
+  background: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border-radius: 30px;
+}
+
+.menu-wrap {
+  border: 2px solid rgb(204, 105, 26);
+  border-radius: 30px;
+  padding: 10px;
+  width: fit-content;
+  margin: 0 auto;
+  background-color: #f4d35e;
+}
+
+.menu button {
+  background-color: #fab20a;
+  border: 1px solid black;
+  margin: 5px;
+}
+
+.menu button:hover {
+  background: rgb(204, 105, 26);
+  /* amarillo */
+}
+
+.menu button.active {
+  background: rgb(204, 105, 26);
+  /* naranja */
+  font-weight: bold;
+  border: 2px solid black;
+}
+
 .homepage-title {
   display: flex;
   align-items: center;
 }
 
 .slider {
-  max-width: 900px;
+  width: 900px;
 }
 
 .slider img {
@@ -20,4 +70,78 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Estilos CSS */
+
+.mosaic {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  
+  .mosaic {
+    flex-direction: column;
+  }
+
+  .mosaic .title {
+    font-size: 1.5rem;
+  }
+
+}
+
+.img-container {
+  flex: 1;
+  background-image: url('./bg.jpg');
+  background-size: cover;
+  border: 2px solid rgb(204, 105, 26);
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.img-container img {
+  max-width: 100%;
+}
+
+.donation-container {
+  width: 100%;
+  text-align: center;
+}
+
+.images-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.images-container img {
+  max-width: 45%; 
+}
+
+@media (max-width: 768px) {
+  .images-container {
+    flex-direction: column;
+  }
+
+  .images-container img {
+    width: 80%;
+  }
+}
+
+.text-container {
+  flex: 1;
+  padding: 20px;
+  border: 2px solid rgb(204, 105, 26);
+  border-radius: 30px;
+  text-align: justify;
+}
+
+.title {
+  color: #cc6901;
+  font-family: 'Roboto', sans-serif;
+}
+
+.content {
+  color: #333;
+  font-family: 'Times New Roman', serif;
 }

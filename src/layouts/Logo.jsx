@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import React from 'react'
+import myLogo from '../assets/images/logos/fundacion_logo.png'
 
 export const Logo = React.memo(() => {
     const logoStyle = {
@@ -12,7 +13,7 @@ export const Logo = React.memo(() => {
     return (
         <Link to="/">
             <img
-                src={'src/assets/images/logos/fundacion_logo.png'} // Utiliza la imagen importada
+                src={myLogo} // Utiliza la imagen importada
                 alt="Mi Logo"
                 style={logoStyle}
             />

@@ -1,7 +1,10 @@
+$sidebarBg: rgba(230,228,21,255); 
+$activeLink: #333;
+
 .sidebarArea {
   flex-shrink: 0;
   width: $sidebarWidth;
-  background-color: $sidebarColor;
+  background-color: $sidebarBg;
   .nav-link {
     color: rgba(255, 255, 255, 0.5);
   }
@@ -9,13 +12,13 @@
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: $border-radius;
     .nav-link {
-      color: white;
+      color: $sidebarBg;
     }
   }
   .sidenav-bg .active {
     background-color: $primary;
+    color: $activeLink;
     border-radius: $border-radius;
-    color: white;
   }
 }
 
